@@ -310,6 +310,70 @@ a {
   gap: 20px;
 }
 
+.product-highlight {
+  padding-top: 24px;
+}
+
+.product-layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.product-copy h2 {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+  max-width: 11ch;
+}
+
+.product-copy p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.03rem;
+}
+
+.product-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.product-points span {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(31, 107, 71, 0.08);
+  color: var(--brand-deep);
+  border: 1px solid rgba(31, 107, 71, 0.12);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.product-frame {
+  margin: 0;
+  padding: 16px;
+  border-radius: calc(var(--radius-lg) + 8px);
+  background:
+    linear-gradient(180deg, rgba(18, 56, 39, 0.04), rgba(18, 56, 39, 0.1)),
+    rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  box-shadow: var(--shadow);
+}
+
+.product-frame img {
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+}
+
 .info-card,
 .story-card,
 .contact-form,
@@ -464,9 +528,25 @@ a {
   border-top: 1px solid var(--line);
 }
 
+.footer-meta {
+  max-width: 760px;
+}
+
+.footer-brand {
+  margin: 0 0 8px;
+  color: var(--brand-deep);
+  font-weight: 800;
+}
+
+.footer-address {
+  margin: 0;
+  line-height: 1.7;
+}
+
 @media (max-width: 960px) {
   .hero-content,
   .section-grid,
+  .product-layout,
   .card-grid,
   .story-grid,
   .contact-layout {
@@ -495,8 +575,13 @@ a {
 
   .story-large img,
   .story-card img,
-  .hero-panel {
+  .hero-panel,
+  .product-frame img {
     min-height: 300px;
+  }
+
+  .product-copy h2 {
+    max-width: none;
   }
 }
 
@@ -519,7 +604,8 @@ a {
 
   .hero-text,
   .about-copy,
-  .contact-copy p {
+  .contact-copy p,
+  .product-copy p {
     font-size: 1rem;
   }
 
@@ -532,5 +618,13 @@ a {
   .primary-button,
   .secondary-button {
     width: 100%;
+  }
+
+  .product-frame {
+    padding: 10px;
+  }
+
+  .product-frame img {
+    height: 340px;
   }
 }

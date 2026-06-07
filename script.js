@@ -51,7 +51,7 @@ if (leadForm && formStatus) {
     localStorage.setItem("enerzeia-leads", JSON.stringify(previousLeads));
 
     formStatus.textContent =
-      "Thanks. Your details have been saved in this browser for the demo.";
+      "Thanks for your interest in Enerzeia Future Farm.";
     formStatus.className = "form-status success";
     leadForm.reset();
   });
